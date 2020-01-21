@@ -7,5 +7,5 @@ echo "Running benchmarks, prefix ID \"${PREFIX}_\""
 for patch in *.pd
 do
 echo "[$patch]"
-script -q "${PREFIX}_${patch%.pd}.csv" bash bench.sh $patch 
+script -qc "bash ./bench.sh $patch" "${PREFIX}_${patch%.pd}.csv"
 done
