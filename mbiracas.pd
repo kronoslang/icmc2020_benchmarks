@@ -1,0 +1,33 @@
+#N canvas 495 23 911 695 12;
+#X declare -lib icmc2020;
+#X obj 81 41 ctlin 20;
+#X obj 145 41 ctlin 21;
+#X obj 212 42 ctlin 22;
+#X obj 11 10 declare -lib icmc2020;
+#X msg 17 192 help;
+#X obj 86 102 / 30;
+#X obj 146 100 / 30;
+#X obj 211 103 / 30;
+#X obj 183 312 dac~;
+#X obj 239 169 hsl 128 15 80 500 1 0 empty empty tuning -2 -8 0 10
+-262144 -1 -1 0 1;
+#X obj 239 197 hsl 128 15 0.05 2 1 0 empty empty ring -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 142 240 mbiracas~ 15 0.03 0.03 0.3 0.01 190;
+#X obj 69 180 inertial_accel~ 0.5 0.8;
+#X obj 414 54 loadbang;
+#X msg 430 100 \; pd dsp 1;
+#X connect 0 0 5 0;
+#X connect 1 0 6 0;
+#X connect 2 0 7 0;
+#X connect 4 0 11 0;
+#X connect 4 0 12 0;
+#X connect 5 0 12 3;
+#X connect 6 0 12 4;
+#X connect 7 0 12 5;
+#X connect 9 0 11 6;
+#X connect 10 0 11 4;
+#X connect 11 0 8 0;
+#X connect 11 0 8 1;
+#X connect 12 0 11 0;
+#X connect 13 0 14 0;
