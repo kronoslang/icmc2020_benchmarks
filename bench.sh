@@ -25,7 +25,7 @@ do
 	if [[ "$OSTYPE" == "darwin"* ]]; then
 		ps -g $$ -o comm=,pid=,etime=,time=,utime=,rss=,%cpu= | grep -v $PID | grep -i pd | sed -e 's/  */,/g'
 	else 
-		ps -p $PID -o comm=,pid=,etime=,time=,utime=,rss=,%cpu= | grep -e 's/  */,/g'
+		ps -p $PID -o comm=,pid=,etime=,time=,utime=,rss=,%cpu= | sed -e 's/\s\s*/,/g'
 	fi
 	sleep 1
 done
