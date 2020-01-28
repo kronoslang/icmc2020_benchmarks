@@ -10,7 +10,7 @@ The supplied scripts are for repeatable benchmarking. They launch Pd, load multi
 
 ## How to Benchmark ##
 
-- Please copy the appropriate binary file to your <Documents>/Pd/externals folder.
+- Please copy the appropriate binary file to your <Documents>/Pd/externals folder. The binaries are `icmc2020.pd_<platform>`.
 - Make sure Pure data is on your path and that you can launch it on the command line with `pd`.
 	- On macOS, you will need to append your path: `$ export PATH=$PATH:"/Applications/<Pd-Bundle-Name-Here>/Contents/MacOS"`
 - Run 20 copies of each patch by `BENCH_INSTANCES=20 bash doall.sh <prefix>`
