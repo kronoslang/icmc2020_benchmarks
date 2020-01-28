@@ -13,7 +13,7 @@ The supplied scripts are for repeatable benchmarking. They launch Pd, load multi
 - Please copy the appropriate binary file to your <Documents>/Pd/externals folder. The binaries are `icmc2020.pd_<platform>`.
 - Make sure Pure data is on your path and that you can launch it on the command line with `pd`.
 	- On macOS, you will need to append your path: `$ export PATH=$PATH:"/Applications/<Pd-Bundle-Name-Here>/Contents/MacOS"`
-- Run 20 copies of each patch by `BENCH_INSTANCES=20 bash doall.sh <prefix>`
+- Run 20 copies of each patch by `BENCH_INSTANCES=20 bash doall.sh <prefix>`. Prefix is an optional identifier that will be prepended to the resulting data files.
 - The script will launch Pd with multiple copies of each patch, wait for a while to stabilize, and collect process statistics with `ps` for 100 seconds. Afterwards, it will kill `Pd` and move to the next patch.
 - The results are written in `.csv` files that correspond to each patch. Each one is prefixed with `prefix`, which should be an abbreviation of the current device/platform (such as 'mba')
 - Please make a directory for your device/environment and move the `.csv` files there.
